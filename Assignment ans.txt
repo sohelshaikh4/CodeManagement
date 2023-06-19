@@ -1,0 +1,24 @@
+1)find duplicate and same values in two array
+var fullWordList = ['1','2','3','4','5'];
+var wordsToRemove = ['1','2','3'];
+=>
+var fullWordList = ['1', '2', '3', '4', '5'];
+var wordsToRemove = ['1', '2', '3'];
+
+var duplicates = [];
+var sameValues = [];
+
+fullWordList.forEach(function (word) {
+  if (wordsToRemove.includes(word)) {
+    if (!duplicates.includes(word)) {
+      duplicates.push(word);
+    }
+    
+    if (!sameValues.includes(word)) {
+      sameValues.push(word);
+    }
+  }
+});
+
+console.log('Duplicates:', duplicates);
+console.log('Same values:', sameValues);
