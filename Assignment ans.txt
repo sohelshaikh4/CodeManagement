@@ -22,3 +22,59 @@ fullWordList.forEach(function (word) {
 
 console.log('Duplicates:', duplicates);
 console.log('Same values:', sameValues);
+
+
+2)longest-chain-of-letters-in-word-javascript
+const word = '00000111110101001111100001001'
+=>
+const word = '00000111110101001111100001001';
+
+let current = 0;
+let max= 0;
+
+for (let i = 0; i < word.length; i++) {
+  const char = word[i];
+  
+  if (char === '1') {
+    current++;
+    if (current > max) {
+      max = current;
+    }
+  } else {
+    current = 0;
+  }
+}
+
+console.log('Longest chain of 1s:', max);
+
+
+
+
+3) let obj1 = { "greeting": "hello" };
+let obj2 = obj1;
+obj1["greeting"] = "Bye";
+console.log(obj1);
+console.log(obj2);
+
+==>
+{ greeting: 'Bye' }
+{ greeting: 'Bye' }
+
+
+4) console.log("7" > 7)
+console.log("2">"21")
+console.log("KL">"S")
+===>
+false
+false
+false
+
+
+
+5)function average(a, b) {
+return a + b / 2;
+}
+console.log(average(2, 1));
+===>
+there is a parenthesis error in a+b/2
+correct way: (a+b)/2
